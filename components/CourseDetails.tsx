@@ -52,19 +52,19 @@ const CourseDetails = ({ isOpen, closeModal, course }: CourseDetailsProps) => {
                             <Image src="./close.svg" alt="close" width={20} height={20} className="object-contain"></Image>
                         </button>
                         <div className='flex-1 flex flex-col gap-3 justify-between'>
-                            <h2 className="text-center text-bold text-3xl pl-4 pr-10 pt-4">
+                            <h2 className="text-center text-bold text-[30px] pl-4 pr-10 pt-4">
                                 {courseTitle}
                             </h2>
                             <div className="text-center relative w-full h-full">
                                 <p>
-                                    <span className="text-bold text-xl">
-                                        {program.subject}{courseNumber}
+                                    <span className="text-[22px]">
+                                        {program.subject}{courseNumber} / {term}
                                     </span>
                                 </p>
                             </div>
                             <div className="flex-1 relative w-full h-full rounded-lg object-contain">
                                 <p className="px-4 h-full pb-4">
-                                    <span className="self-end text-[14px] font-light">
+                                    <span className="self-end text-[18px] font-light">
                                         {text}
                                     </span>
                                 </p>

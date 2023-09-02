@@ -26,12 +26,11 @@ export default async function Home({searchParams}: any) {
         </div>
         <div className="mt-12 w-full flex justify-between items-center flex-wrap gap-5">
           <SearchBar />
-  
-          <div className="flex justify-start flex-wrap items-center gap-2">
+        </div>
+        <div className="flex justify-start flex-wrap items-center gap-2 mt-3 ml-2">
             <CustomFilter title="term" options={terms} icon="./year.svg" />
             <CustomFilter title="year" options={years} icon="./level.svg"/>
           </div>
-        </div>
         {!isDataEmpty ? (
           <section>
             <div className='course-rapper'>

@@ -21,11 +21,12 @@ const CourseCard = ({ course }: CourseCardProps) => {
         <h2 className="text-bold text-3xl">
           {program.subject}{courseNumber}
         </h2>
+        <p className='text-l font-light'>{term}</p>
       </div>
       <p>
       <span className="self-end text-[14px] font-medium ">
-         {program.subjectDescription} 
-        </span>
+         {program.subjectDescription}
+      </span>
       </p>
       <p className="flex mt-6 text-[32px]">
         <span className="self-start text-[14px] font-semibold">
