@@ -21,6 +21,7 @@ export interface Subject {
 }
 
 export interface ProgramProps {
+    subject_code: string;
     id: number;
     subject: string;
     subjectDescription: string;
@@ -30,11 +31,10 @@ export interface ProgramProps {
 export interface CourseProps {
     id: number;
     program: ProgramProps;
-    term: string;
-    courseNumber: number;
-    courseTitle: string;
+    course_number: number;
+    title: string;
     slug: string;
-    creditHours: number;
+    credit: number;
     description: string;
     link: string;
 }

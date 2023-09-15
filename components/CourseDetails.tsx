@@ -14,7 +14,8 @@ interface CourseDetailsProps {
 }
 
 const CourseDetails = ({ isOpen, closeModal, course }: CourseDetailsProps) => {
-  const { id, program, term, courseNumber, courseTitle, slug, creditHours, description, link } = course;
+  const { id, program, course_number, title, slug, credit, description, link } = course;
+  const subject = program.subject.split('(').slice(0,-1);
   var text = "No description available."
   if (description) {
     text = description.replace(/<\/?p>/g, '')
@@ -53,12 +54,12 @@ const CourseDetails = ({ isOpen, closeModal, course }: CourseDetailsProps) => {
                         </button>
                         <div className='flex-1 flex flex-col gap-3 justify-between'>
                             <h2 className="text-center text-bold text-[30px] pl-4 pr-10 pt-4">
-                                {courseTitle}
+                                {title}
                             </h2>
                             <div className="text-center relative w-full h-full">
                                 <p>
                                     <span className="text-[22px]">
-                                        {program.subject}{courseNumber} / {term}
+                                        {subject}
                                     </span>
                                 </p>
                             </div>

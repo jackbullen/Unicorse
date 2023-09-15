@@ -11,26 +11,26 @@ interface CourseCardProps {
 }
 
 const CourseCard = ({ course }: CourseCardProps) => {
-  const { id, program, term, courseNumber, courseTitle, slug, creditHours, description, link } = course;
-
+  const { id, program, course_number, title, slug, credit, description, link } = course;
+  const subject = program.subject.split('(').slice(0,-1);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className='course-card group' onClick={() => setIsOpen(true)}>
       <div className='w-full flex justify-between items-start gap-2'>
         <h2 className="text-bold text-3xl">
-          {program.subject}{courseNumber}
+          {program.subject_code}{course_number}
         </h2>
-        <p className='text-l font-light'>{term}</p>
+        <p className='text-l font-light'></p>
       </div>
       <p>
       <span className="self-end text-[14px] font-medium ">
-         {program.subjectDescription}
+         {subject}
       </span>
       </p>
       <p className="flex mt-6 text-[32px]">
         <span className="self-start text-[14px] font-semibold">
-         {courseTitle} 
+         {title} 
         </span>
       </p>  
 
